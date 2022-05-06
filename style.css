@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    display: flex;
+    background-color: rgb(226, 226, 226);
+    font-family: 'Calibri', sans-serif;
+}
+
+.nav {
+    width: 15%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(236, 236, 236);
+}
+
+.dropdown {
+    display: none;
+}
+
+.dropbtn {
+    display: none;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+    border-radius: 15px 50px 50px 15px;
+}
+
+.a_clear {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.a_clear:hover {
+    cursor: pointer;
+    color: grey;
+}
+
+nav a img {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+nav a:hover {
+    background-color: khaki;
+    text-decoration: none;
+}
+
+.new_note {
+    margin-top: 40px;
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 14%);
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new_note input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.title {
+    height: 30px;
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+.note_content {
+    width: 100%;
+    height: auto;
+    word-break: break-all;
+    border: none;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+.grey {
+    color: grey;
+}
+
+.note_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.note_footer_items {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.note_footer_items:hover {
+    cursor: pointer;
+    color: grey;
+}
+
+@media(max-width: 1000px) {
+    body {
+        display: unset;
+    }
+    .hide_mobile {
+        display: none;
+    }
+    .new_note {
+        width: 80%;
+    }
+    /*-Dropdown menu for responsive*/
+    .dropdown {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .dropdown:hover {
+        cursor: pointer;
+    }
+    .dropbtn {
+        display: block;
+        width: 50px;
+    }
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        position: absolute;
+        right: 0;
+        top: 55px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        transform: translateX(901px);
+        transition: all 225ms ease-in-out;
+    }
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        margin-left: 0;
+    }
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    .show {
+        transform: translateX(0);
+    }
+    /*Dropdown end*/
+}

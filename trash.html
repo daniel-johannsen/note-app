@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Notizblock</title>
+</head>
+
+<body onload="renderTrash()">
+
+    <div class="dropdown">
+        <img src="img/notes.png" onclick="dropdown()" class="dropbtn">
+        <div id="myDropdown" class="dropdown-content">
+            <a href="index.html" id="nav_1">Notes</a>
+            <a href="archive.html" id="nav_2">Archive</a>
+            <a href="trash.html" id="nav_3">Trash</a>
+        </div>
+    </div>
+    <div class="nav hide_mobile">
+        <nav>
+            <a href="index.html"><img src="img/notes.png" alt=""> Notes</a>
+            <a href="archive.html"><img src="img/archive.png" alt=""> Archive</a>
+            <a href="trash.html"><img src="img/trash.png" alt=""> Trash</a>
+        </nav>
+    </div>
+
+    <div class="main">
+
+        <!-- <div class="new_note">
+            <div><input type="text" class="title" id="noteTitle" placeholder="Title"></div>
+            <div><textarea rows="4" cols="65" class="note_content" id="noteContent" placeholder="Take a note..."></textarea></div>
+            <div class="note_footer">
+                <div class="note_footer_items"><img src="img/trash.png" alt="">Clear</div>
+                <div class="note_footer_items"><img src="img/save.png" alt="">Save</div>
+            </div>
+        </div> -->
+
+        <div class="content" id="trashContent"></div>
+
+    </div>
+
+</body>
+
+</html>
